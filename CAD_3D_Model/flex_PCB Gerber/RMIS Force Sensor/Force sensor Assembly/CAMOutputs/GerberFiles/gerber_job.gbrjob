@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2023-12-11T22:55:28Z",
+        "GenerationSoftware": {
+            "Application": "Fusion 360 Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 0.235,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "flex_PCB v26"
+        },
+        "Owner": "Xiangru Li <xxl1331@case.edu>",
+        "Size": {
+            "X": 51.693788,
+            "Y": 81.074259
+        }
+    }
+}

@@ -1,0 +1,56 @@
+Serial* serialport = new Serial("COM4");
+
+int main()
+{
+	double ForceData[3];
+	bool exit = false;
+	int bytesread = 0;
+	bool sent = false;
+	cForceSensor g_ForceSensor;
+	g_ForceSensor.Set_Calibration_File_Loc("./FT14048.cal");
+	g_ForceSensor.Initialize_Force_Sensor("Dev3/ai0:5");
+
+	Sleep(1000);
+
+	if (serialport->IsConnected())
+		printf("serial port connected \n");
+
+	//preallocate memory we are printing x.xx,x.xx,x.xx,x.xx\n which is 20chars
+	char buf[20];
+	char outbuf = 'X';
+
+	g_ForceSensor.Zero_Force_Sensor();
+	StartTime = t.seconds();
+	
+	while (exit==false)
+	{	
+		CurrentTime = t.seconds(); // update the current time
+
+		if ((CurrentTime - ReferenceTime) > SampleTime) {
+
+			int i = g_ForceSensor.AcquireFTData();
+			g_ForceSensor.GetForceReading(ForceData);
+			//printf("Time: %.3f\n", CurrentTime-StartTime);
+
+			if (sent == false) //if sent flag is false we ask the arduino for a new set of readings
+				sent = serialport->WriteData(&outbuf, 1);
+
+			if (sent == true) {
+				//if we succeed in sending then we read the serial port 
+				bytesread = serialport->ReadData(buf, 20);
+				if (bytesread == 20)
+					sent = false;
+			}
+
+			
+			printf("f:%.3f Hz, fx: %.2f, fy: %.2f, fz: %.2f\r", 1/(CurrentTime-ReferenceTime), ForceData[0], ForceData[1], ForceData[2]);
+
+			ReferenceTime = CurrentTime;
+		}
+
+	}
+
+	return 0;
+
+	printf("exiting...");
+}

@@ -1,0 +1,23 @@
+﻿  main.cpp
+c:\users\chuaz\source\cpp force sensor\force sensor example vs2017\force_sensor_2010\force_sensor_2010\include\ftsharedrt.h(41): warning C4005: 'TRUE': macro redefinition
+  c:\users\chuaz\source\cpp force sensor\force sensor example vs2017\force_sensor_2010\force_sensor_2010\include\nidaqmx.h(100): note: see previous definition of 'TRUE'
+c:\users\chuaz\source\cpp force sensor\force sensor example vs2017\force_sensor_2010\force_sensor_2010\include\ftsharedrt.h(42): warning C4005: 'FALSE': macro redefinition
+  c:\users\chuaz\source\cpp force sensor\force sensor example vs2017\force_sensor_2010\force_sensor_2010\include\nidaqmx.h(103): note: see previous definition of 'FALSE'
+c:\users\chuaz\source\cpp force sensor\force sensor example vs2017\force_sensor_2010\force_sensor_2010\main.cpp(168): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+  SerialPort.cpp
+Force_Sensor_2010.lib(cForceSensor.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in main.obj
+Force_Sensor_2010.lib(cForceSensor.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in main.obj
+Force_Sensor_2010.lib(cForceSensor.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+Force_Sensor_2010.lib(cATIForceSensor.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in main.obj
+Force_Sensor_2010.lib(cATIForceSensor.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in main.obj
+Force_Sensor_2010.lib(cDaqHardwareInterface.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in main.obj
+Force_Sensor_2010.lib(cDaqHardwareInterface.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in main.obj
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+Force_Sensor_2010.lib(cForceSensor.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Force_Sensor_2010.lib(cATIForceSensor.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Force_Sensor_2010.lib(cDaqHardwareInterface.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Force_Sensor_2010.lib(cForceSensor.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReport
+Force_Sensor_2010.lib(cATIForceSensor.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReport
+Force_Sensor_2010.lib(cDaqHardwareInterface.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReport
+C:\Users\chuaz\source\cpp force sensor\Force Sensor Example VS2017\Force_Sensor_2010\Release\Force_Sensor_2010.exe : fatal error LNK1120: 2 unresolved externals

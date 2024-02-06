@@ -1,0 +1,5 @@
+Partlist exported from Team Hub: RMIS Force Sensor   Project: Force sensor Assembly  Board: flex_PCB v26 at 2023/12/11 17:55
+
+Qty Value      Device           Package          Parts         Description 
+2              FEMALE_CONNECTOR FEMALE_CONNECTOR U$4, U$5                  
+3   HSFPAR004A HSFPAR004A       HSFPAR004A       U$1, U$2, U$3             
